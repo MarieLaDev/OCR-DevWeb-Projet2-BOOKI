@@ -1,4 +1,10 @@
 /****** General ***********/
+/* Marie : couleurs site 
+                Bleu foncé #0065FC --main-color
+                Bleu clair #DEEBFF --filter-bg-color
+                Grix foncé #D9D9D9 --bg-cards-color
+                Gris clair #F2F2F2 --main-bg-color
+                 */
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -7,6 +13,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --bg-cards-color:#D9D9D9; /* Ajout Marie */
 }
 
 .fa-solid {
@@ -17,6 +24,57 @@ body {
     display: flex;
     justify-content: center;
 }
+
+/* Début des ajouts pour le header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    padding: 10px;
+    height: 61px;
+    width: auto;
+}
+
+nav {
+    
+
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    display: inline; /* le inline s'applique aux lignes pas à l'ul/ol */
+    margin: 0;
+
+}
+
+li a {
+    padding-top 16px;
+    font-size: 19px;
+    border-top:2px solid transparent;
+    /* Sur la maquette, ce ne sont pas des balise <a> mais des boutons pour le menu, A VOIR */
+}
+
+li a:hover {
+    border-top:2px solid var(--main-color);
+    color: var(--main-color);
+    
+}
+
+/* Fin des ajouts pour le header */
 
 .main-container {
     width: 100%;
