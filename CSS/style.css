@@ -7,6 +7,9 @@
                  */
 * {
     font-family: 'Raleway', sans-serif;
+    /* ajout Marie réinitilisation des marges et padding à 0 */
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -23,58 +26,8 @@
 body {
     display: flex;
     justify-content: center;
-}
-
-/* Début des ajouts pour le header */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 79px;
-    margin-bottom: 20px;
-}
-
-.logo {
-    padding: 10px;
-    height: 61px;
-    width: auto;
-}
-
-nav {
-    
-
-}
-
-ul {
-    display: flex;
-    gap: 2em;
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-
 }
-
-li {
-    display: inline; /* le inline s'applique aux lignes pas à l'ul/ol */
-    margin: 0;
-
-}
-
-li a {
-    padding-top 16px;
-    font-size: 19px;
-    border-top:2px solid transparent;
-    /* Sur la maquette, ce ne sont pas des balise <a> mais des boutons pour le menu, A VOIR */
-}
-
-li a:hover {
-    border-top:2px solid var(--main-color);
-    color: var(--main-color);
-    
-}
-
-/* Fin des ajouts pour le header */
 
 .main-container {
     width: 100%;
@@ -83,13 +36,137 @@ li a:hover {
     box-sizing: border-box;
 }
 
+/* Début header */
+header {
+    display: flex;
+    flex-direction: row; /* ATTENTION column sur mob */
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    height: 19px;
+    width: auto;
+    padding: 30px 0 30px 0; /* dimension logo et padding identiques sur tab et mob 
+    ordre => padding: top right bottom left; */
+}
+
+ul {
+    display: flex;
+    align-self: flex-start;
+    gap: 68px;
+    list-style-type: none;
+    height: 35px;
+}
+
+li {
+    display: inline; /* le inline s'applique aux lignes pas à l'ul/ol */
+}
+
+li a {
+    padding-top: 16px;
+    font-size: 16px; /* identiques en tab et mob */
+
+    /* Sur la maquette, ce ne sont pas des balise <a> mais des boutons pour le menu, A VOIR */
+}
+
+li a:hover, li a:active {
+    border-top:2px solid var(--main-color);
+    color: var(--main-color);
+    
+}
+/* Fin header */
+
+/* Début formulaire de recherche */
+.cta {
+    gap: 24px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 22px; /* identique sur tab et mob */
+    height: 26px;
+    margin-bottom: 8px;
+}
+
+.div-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar {
+
+}
+
+.filter-zone {
+    display: flex;
+    flex-direction: row; /* ATTENTION passe en column en tab et mob */
+
+}
+
+.filter-btn-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-title {
+    font-size: 18px; /* idem sur tab et mob */
+}
+
+.btn-filtre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 19px 4px 19px;
+    height: 50px; 
+    border: 2px solid var(--bg-cards-color);
+    border-radius: 25px;
+    gap: 10px;
+    /* jusque là idem sur tab et mob*/
+    font-size: 20px; /* ATTENTION 16px sur mobile */
+}
+
+.i-btn {
+    font-size: 22px; /* idem tab et mob */
+}
+
+.icon-info {
+    height: 24px; /* dimensions identique sur tab et mob */
+    width: 24px;
+    border: 1px solid var(--bg-cards-color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.font16 {
+    font-size: 16px; /* Utile au footer + zone info */
+    height: 19px;
+
+}
+/* Fin formulaire de recherche */
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
 .section-title {
-    margin: 0;
+    margin: 0; /* est-ce encore utile avec la réinitialisation des marges dans *{} */
     font-size: 22px;
 }
 
