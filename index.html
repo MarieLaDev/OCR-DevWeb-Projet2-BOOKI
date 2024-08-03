@@ -17,7 +17,7 @@
 <body>
     <div class="main-container">
         <header>
-            <!-- début des ajouts pour  le header -->
+            <!-- logo et nav -->
              <img src="./images/logo/Booki.png" class="logo" alt="Logo de l'entreprise BOOKI"/>
             <nav>
                 <ul>
@@ -29,28 +29,31 @@
                     </li>
                 </ul>
             </nav>
-            <!-- Fin des ajouts pour le header -->
-        </header>
-        <main>
-            <!-- début ajout zone formulaire de recherche -->
+
+        
+            <!-- zone CTA - Formulaire de recherche -->
             <section>
+                <!-- Info group -->
                 <div class="cta div-column">
-                    <div>
+                    <div> <!-- Headline-->
                         <h1>Trouvez des hébergements pour des vacances de rêve </h1>
                         <p class="font16">En plein centre ville ou en pleine nature</p>
                     </div>
+                    <!-- search-bar -->
                     <div class="div-row search-bar">ZONE DE RECHERCHE</div>
-                    <div class="filter-zone">
+                    <!-- filter-bar -->
+                    <div class="filter-bar">
                         <div  class="filter-title">
                             Filtres
                         </div>
                         <div class="filter-btn-zone">
-                            <div class="btn-filtre"><i class="fa-solid fa-money-bill i-btn"></i>Économique</div>
-                            <div class="btn-filtre"><i class="fa-solid fa-person"></i>Économique</div>
-                            <div class="btn-filtre"><i class="fa-solid fa-heart"></i>Économique</div>
-                            <div class="btn-filtre"><i class="fa-solid fa-fire"></i>Économique</div>
+                            <div class="filter-btn"><i class="fa-solid fa-money-bill i-btn"></i>Économique</div>
+                            <div class="filter-btn"><i class="fa-solid fa-person"></i>Économique</div>
+                            <div class="filter-btn"><i class="fa-solid fa-heart"></i>Économique</div>
+                            <div class="filter-btn"><i class="fa-solid fa-fire"></i>Économique</div>
                         </div>
                     </div>
+                    <!-- info-bar -->
                     <div class="div-row">
                         <div class="icon-info">
                             <i class="fa-solid fa-info"></i>
@@ -59,12 +62,15 @@
                     </div>
                 </div>
             </section>
-            <!-- Fin ajout formulaire de recherche -->
+        </header>
+        <main>    
             <div id="#heberg" class="hebergements-and-populaires">
             <!-- Ajout d'un ID dans la div pour lien menu -->
+                <!-- Offers/Main-->
                 <section class="hebergements">
 
                 </section>
+                <!-- Offers/Sponsored -->
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
@@ -131,14 +137,19 @@
                     </div>
                 </section>
             </div>
+            <!-- Activities-->
             <div>
-                <section id="#activites"><!-- Ajout de la div et la section pour vérifier le rendu du main + ID pour lien menu -->
+                <section id="#activites" class="activities"><!-- Ajout de la div + section pour vérifier le rendu du main + ID pour lien menu -->
                     <p>Activités section à faire</p>
                 </section>
             </div>
         </main>
         <footer>
-            <p>Footer à faire</p>
+            <div class="">
+                <div>à propos</div>
+                <div> Nos hébergements</div>
+                <div>Assistance</div>
+            </div>
         </footer>
     </div>
 </body>
