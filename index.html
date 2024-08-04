@@ -42,25 +42,33 @@
                         <p class="font16">En plein centre ville ou en pleine nature</p>
                     </div>
                     <!-- search-bar -->
-                    <div class="div-row search-bar">ZONE DE RECHERCHE</div>
+                    <form class="div-row search-bar">
+                        <div class="search-bar-loc"><i class="fa-solid fa-location-dot i-btn"></i>
+                        </div>
+                        <input type="text" name="input-ville" id="input-ville" value=" Marseille, France">
+                        <!-- Bouton ordi et tablette -->
+                        <button type="submit" class="search-bar-btn font18">Rechercher</button>
+                        <!-- Bouton mobile (par défaut hidden) -->
+                        <button type="submit" class="mob-search-btn search-bar-btn"><i class="fas fa-search"></i></button>
+                    </form>
                     <!-- filter-bar -->
                     <div class="filter-bar">
                         <div  class="filter-title">
                             Filtres
                         </div>
-                        <div class="filter-btn-zone">
-                            <div class="filter-btn"><i class="fa-solid fa-money-bill i-btn"></i>Économique</div>
-                            <div class="filter-btn"><i class="fa-solid fa-person"></i>Économique</div>
-                            <div class="filter-btn"><i class="fa-solid fa-heart"></i>Économique</div>
-                            <div class="filter-btn"><i class="fa-solid fa-fire"></i>Économique</div>
-                        </div>
+                        <form class="filter-btn-zone">
+                            <button type="submit" class="filter-btn"><i class="fa-solid fa-money-bill i-btn"></i>Économique</button>
+                            <button type="submit" class="filter-btn"><i class="fa-solid fa-person"></i>Familial</button>
+                            <button type="submit" class="filter-btn"><i class="fa-solid fa-heart"></i>Romantique</button>
+                            <button type="submit" class="filter-btn"><i class="fa-solid fa-fire"></i>Nos pépites</button>
+                        </form>
                     </div>
                     <!-- info-bar -->
                     <div class="div-row">
-                        <div class="icon-info">
+                        <div class="icon-info  marg-bottom35">
                             <i class="fa-solid fa-info"></i>
-                        </div>
-                        <div class="font16">Plus de 500 logements sont disponibles dans cette ville</div>
+                        </div class="font16">
+                        <p class=" marg-bottom35">Plus de 500 logements sont disponibles dans cette ville</p>
                     </div>
                 </div>
             </section>
