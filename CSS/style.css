@@ -268,6 +268,11 @@ a {
 }
 /****** Fin des communs *******/
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -292,8 +297,11 @@ a {
     margin-bottom: 30px;
 }
 
-.hebergements-cards {
+.hebergements-cards, .hebergement-cards .card, .hebergements-cards .card-content {
     display: flex;
+}
+
+.hebergements-cards {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -301,12 +309,14 @@ a {
     gap: 30px;
 }
 
-.hebergements-cards .card {
-    display: flex;
+.hebergements-cards .card, .hebergements-cards .card-content {
     flex-direction: column;
+}
+
+.hebergements-cards .card {
     justify-content: space-evenly;
-    align-items: left;
-    width: 240px; /* ATTENTION différent sur tab (268) et mob (335px) */
+    width: 240px; /* A REFAIRE sans width en px - chercher pourquoi cela ne fonctionne pas avec % pourtant recommandé dans l'énoncé)
+    ATTENTION ordi 240 px différent sur tab (268) et mob (335px) */
 }
 
 .hebergements-cards img {
@@ -317,11 +327,8 @@ a {
 }
 
 .hebergements-cards .card-content {
-    width: 67%;
-    padding-left: 5px; 
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    padding-left: 5px; 
     box-sizing: border-box;
     gap: 8px;
 }
@@ -329,7 +336,6 @@ a {
 .hebergements-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
-    text-wrap: nowrap;
 }
 
 .hebergements-cards .card-subtitle {
@@ -351,14 +357,17 @@ a {
     width: 32%; /* ATTENTION 100% sur tab et mob */
 }
 
-.populaires-title {
+.populaires-title, .populaires-cards .card, 
+.populaires-cards .card-conten {
     display: flex;
+}
+
+.populaires-title {
     justify-content: space-between;
     align-items: center;
 }
 
 .populaires-cards .card {
-    display: flex;
     margin-top: 33px;
 }
 
@@ -370,11 +379,10 @@ a {
 }
 
 .populaires-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 67%;
+    padding-left: 15px;
     box-sizing: border-box;
 }
 
@@ -393,13 +401,43 @@ a {
 
 /******* Activités *******/
 .activities {
-    /* ATTTENTION  
-    pas de gap ou padding sur ordi mais 
-    sur tab gap 30px et pas de padding
-    sur mob gap 50px et padding 30px */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;/* ATTENTION idem sur tab maix pour  mob gap 50px */
+    padding: 30px ;
 }
 
- 
+.activities-title {
+    justify-content: left;
+}
+
+.activities-cards {
+    display: flex;
+    flex-direction: row; /* ATTENTION vérifier en column en version mob */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* ATTENTION idem sur tab mais mob gap 15px */
+}
+
+.activities-cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 280px; /* A REFAIRE sans width en px */
+}
+
+.activities-cards img {
+    width: 100%;
+    height: 380px; /* ATTENTION tab 200px et mob 141px */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activities-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
 
 
 /******** FOOTER *********/
