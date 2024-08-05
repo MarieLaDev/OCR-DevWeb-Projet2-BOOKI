@@ -61,20 +61,23 @@ header {
     ordre => padding: top right bottom left; */
 }
 
-ul {
+nav ul {
     align-self: flex-start;
     gap: 68px; /* ATTENTION sans doute sapce around en mob */
     list-style-type: none;
     height: 35px;
 }
 
-li {
+nav li {
     display: inline; /* le inline s'applique aux lignes pas à l'ul/ol */
 }
 
 li a {
-    padding-top: 16px; /* ATTENTION sur mobile le padding est en bas */
     font-size: 16px; /* identiques en tab et mob */
+}
+
+nav li a {
+    padding-top: 16px; /* ATTENTION sur mobile le padding est en bas */
 
     /* Sur la maquette, ce ne sont pas des balise <a> mais des boutons pour le menu, A VOIR */
 }
@@ -93,6 +96,10 @@ nav li a:hover, nav li a:active {
 
 .cta {
     gap: 24px;
+}
+
+.cta-text {
+    font-size: 16px; /* idem au footer + zone info */
 }
 
 h1 {
@@ -138,6 +145,7 @@ h1 {
     color: white;
     padding: 0 15px 0 15px;
     font-weight: 700;
+    font-size: 18px;
 }
 
 .mob-search-btn {
@@ -221,10 +229,6 @@ h1 {
     justify-content: center;
 }
 
-/* Police 16px */
-.font16 {
-    font-size: 16px; /* Utile au footer + zone info */
-}
 
 /* Police 18px */
 .font18 {
@@ -303,10 +307,10 @@ main {
 
 .hebergements-cards {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
 }
 
 .hebergements-cards .card, .hebergements-cards .card-content {
@@ -314,9 +318,11 @@ main {
 }
 
 .hebergements-cards .card {
-    justify-content: space-evenly;
-    width: 240px; /* A REFAIRE sans width en px - chercher pourquoi cela ne fonctionne pas avec % pourtant recommandé dans l'énoncé)
-    ATTENTION ordi 240 px différent sur tab (268) et mob (335px) */
+    justify-content: space-between;
+}
+
+.hebergements-cards a {
+    width: 30%; /* ATTENTION version mob */
 }
 
 .hebergements-cards img {
@@ -413,18 +419,19 @@ main {
 
 .activities-cards {
     display: flex;
-    flex-direction: row; /* ATTENTION vérifier en column en version mob */
-    justify-content: space-evenly;
+    flex-direction: row; /* ATTENTION en column en version mob */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px; /* ATTENTION idem sur tab mais mob gap 15px */
+}
+
+.activities-cards a {
+    width: 24%;
 }
 
 .activities-cards .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 280px; /* A REFAIRE sans width en px */
 }
 
 .activities-cards img {
@@ -435,17 +442,44 @@ main {
 }
 
 .activities-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
 
 
 /******** FOOTER *********/
 footer {
-    padding: 30px;
+    display: flex; /* row par défaut mais doit passer en column pour mobile */
+    justify-content: space-between;
+    padding: 20px;
     gap: 50px;
+    background-color: var(--bg-cards-color);
 }
 
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    gap: 15px;
+    width: 33%;
+
+}
+
+.footer-block h2 {
+    font-size: 18px;
+}
+
+.footer-block ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-self: flex-start;
+    list-style-type: none;
+    gap: 15px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
