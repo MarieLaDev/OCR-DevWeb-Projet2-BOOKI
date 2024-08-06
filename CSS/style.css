@@ -37,7 +37,7 @@ body {
 }
 
 /* Début header */
-header, .header, ul {
+header, .header, nav, ul, li {
     display: flex;
 }
 
@@ -47,7 +47,7 @@ header {
 }
 
 .header {
-    flex-direction: row; /* ATTENTION column sur mob */
+    flex-direction: row; /* column sur mob */
     justify-content: space-between;
     align-items:center;
     height: 79px;
@@ -57,33 +57,40 @@ header {
 .logo {
     height: 19px;
     width: auto;
-    padding: 30px 0 30px 0; /* dimension logo et padding identiques sur tab et mob 
-    ordre => padding: top right bottom left; */
+    padding: 30px 0 30px 0; /* ordre => padding: top right bottom left; */
+}
+
+nav {
+    align-self: flex-start;
+    margin-top: 2px;
 }
 
 nav ul {
-    align-self: flex-start;
-    gap: 68px; /* ATTENTION sans doute sapce around en mob */
-    list-style-type: none;
-    height: 35px;
+    gap: 68px; /* ATTENTION sans doute space around en mob */
 }
 
-nav li {
-    display: inline; /* le inline s'applique aux lignes pas à l'ul/ol */
+li {
+    flex: 1;
 }
 
-li a {
+nav a {
+    display: block;
+    flex: 1;
+}
+
+a li {
     font-size: 16px; /* identiques en tab et mob */
 }
 
-nav li a {
+nav li {
     padding-top: 16px; /* ATTENTION sur mobile le padding est en bas */
+    border-top: 2px solid transparent;
 
     /* Sur la maquette, ce ne sont pas des balise <a> mais des boutons pour le menu, A VOIR */
 }
 
-nav li a:hover, nav li a:active {
-    border-top:2px solid var(--main-color);
+nav li:hover, nav li:active {
+    border-top: 2px solid var(--main-color);
     color: var(--main-color);
     
 }
@@ -229,12 +236,6 @@ h1 {
     justify-content: center;
 }
 
-
-/* Police 18px */
-.font18 {
-    font-size: 18px; 
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -339,9 +340,12 @@ main {
     gap: 8px;
 }
 
-.hebergements-cards .card-title {
+.hebergements-cards .card-txt .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+    /* ci-dessous, pour ne pas avoir de différence de hauteur dans les cards au passage à la ligne des titres les plus grands dois-je le laisser ? */
+    text-wrap: nowrap;
+    overflow: hidden;
 }
 
 .hebergements-cards .card-subtitle {
@@ -360,7 +364,7 @@ main {
 
 /****** Populaires ***********/
 .populaires {
-    width: 32%; /* ATTENTION 100% sur tab et mob */
+    width: 32%;
 }
 
 .populaires-title, .populaires-cards .card, 
@@ -409,7 +413,7 @@ main {
 .activities {
     display: flex;
     flex-direction: column;
-    gap: 30px;/* ATTENTION idem sur tab maix pour  mob gap 50px */
+    gap: 30px;/* ATTENTION idem sur tab mais pour  mob gap 50px */
     padding: 30px ;
 }
 
@@ -521,5 +525,34 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container {
+        padding: 0;
+    }
+    
+    .header {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        width: 100%;
+        padding: 0 0 16px 0;
+        gap: 0;
+    }
+
+    nav li {
+        padding-bottom: 16px;
+        border-bottom: 2px solid var(--main-bg-color);
+    }
+
+    nav li:hover, nav li:active {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid var(--main-color);
+        color: var(--main-color);
+    }
 }
