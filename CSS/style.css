@@ -7,7 +7,7 @@
                  */
 * {
     font-family: 'Raleway', sans-serif;
-    /* ajout Marie réinitilisation des marges et padding à 0 */
+    /* ajout Marie réinitilisation des marges et paddings à 0 */
     margin: 0;
     padding: 0;
 }
@@ -32,6 +32,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -56,7 +57,7 @@ header {
 .logo {
     height: 19px;
     width: auto;
-    padding: 30px 0 30px 0; /* ordre => padding: top right bottom left; */
+    padding: 30px 0 30px 0;
 }
 
 nav {
@@ -65,7 +66,7 @@ nav {
 }
 
 nav ul {
-    gap: 68px; /* ATTENTION sans doute space around en mob */
+    gap: 68px;
 }
 
 li {
@@ -77,20 +78,17 @@ nav a {
 }
 
 a li {
-    font-size: 16px; /* identiques en tab et mob */
+    font-size: 16px;
 }
 
 nav li {
     padding-top: 16px; 
     border-top: 2px solid transparent; /* sur mobile le padding et la bordure sont en bas */
-
-    /* Sur la maquette, ce ne sont pas des balise <a> mais des boutons pour le menu, A VOIR */
 }
 
 nav li:hover, nav li:active {
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
-    
 }
 
 
@@ -104,12 +102,12 @@ nav li:hover, nav li:active {
 }
 
 .cta-text {
-    font-size: 16px; /* idem au footer + zone info */
+    font-size: 16px;
 }
 
 h1 {
     font-weight: 700;
-    font-size: 22px; /* identique sur tab et mob */
+    font-size: 22px;
     margin-bottom: 8px;
 }
 
@@ -163,15 +161,14 @@ h1 {
 }
 
 .filter-bar {
-    flex-direction: row; /* ATTENTION passe en column en tab et mob */
+    flex-direction: row; /* passe en column en tab et mob */
     align-items: center;
-    gap: 15px; /* ATTENTION 20px pour tab et mob */
+    gap: 15px; /* 20px pour tab et mob */
 }
 
 .filter-title {
     font-size: 18px; 
     font-weight: 700;
-    /* idem sur tab et mob */
 }
 
 .filter-btn-zone {
@@ -190,9 +187,9 @@ h1 {
     border: 2px solid var(--bg-cards-color);
     background-color: white;
     border-radius: 25px;
-    /* jusque là idem sur tab et mob*/
-    gap: 15px; /* ATTENTION Gap 20px pour tab et mob */
-    font-size: 20px; /* ATTENTION 16px sur mobile */
+    font-weight: 700;
+    gap: 15px;
+    font-size: 20px; /* 16px sur mobile */
 }
 
 /* Survol des boutons filtres */
@@ -201,13 +198,13 @@ h1 {
 }
 
 .i-btn {
-    font-size: 22px; /* idem tab et mob */
+    font-size: 22px;
 }
 
 .icon-info {
     justify-content: center;
     align-items: center;    
-    height: 24px; /* dimensions identique sur tab et mob */
+    height: 24px;
     width: 24px;
     border: 1px solid var(--bg-cards-color);
     border-radius: 12px;
@@ -217,18 +214,17 @@ h1 {
 
 
 /******* Classes communes utilsées à plusieurs endroits du site *******/
-
-/* div flex row align center */
 .div-row, .div-column { 
     display: flex;
 }
 
+/* div flex row align center */
 .div-row { 
     flex-direction: row;
     align-items: center;
 }
 
-/* div flex column */
+/* div flex column center */
 .div-column {
     flex-direction: column;
     justify-content: center;
@@ -265,10 +261,6 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
-
-.marg-bottom35 {
-    margin-bottom: 35px; /* ATTENTION retirer sur mobile */
-}
 /****** Fin des communs *******/
 
 main {
@@ -281,11 +273,12 @@ main {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    gap: 40px; /* ATTENTION gap 50px sur tab et gap 15px sur mob */
+    gap: 40px; /* gap 50px sur tab et 15px sur mob */
+    margin-top: 30px;
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color); /* ATTENTION, pas de fond pour la version mob */
+    background-color: var(--main-bg-color); /* pas de fond pour la version mob */
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -293,7 +286,7 @@ main {
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%; /* ATTENTION 100% sur tab et mob */
+    width: 65%; /* 100% sur tab et mob */
 }
 
 .hebergement-title {
@@ -321,13 +314,13 @@ main {
 }
 
 .hebergements-cards a {
-    width: 30%; /* ATTENTION version mob */
+    width: 30%; /* 100% version mob */
 }
 
 .hebergements-cards img {
     width: 100%;
     height: 136px;
-    object-position: center 95%; /* Photo centrée et la visualisation comment à 10% du bas de la photo */
+    object-position: center 90%; /* Photo centrée et la visualisation commence à 10% du bas de la photo */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -388,10 +381,11 @@ main {
 }
 
 .populaires-cards .card-content {
-    flex-direction: column;
-    justify-content: space-between;
     width: 67%;
     padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
@@ -412,8 +406,8 @@ main {
 .activities {
     display: flex;
     flex-direction: column;
-    gap: 30px;/* ATTENTION idem sur tab mais pour  mob gap 50px */
-    padding: 30px ;
+    gap: 30px;
+    padding: 30px;
 }
 
 .activities-title {
@@ -422,7 +416,7 @@ main {
 
 .activities-cards {
     display: flex;
-    flex-direction: row; /* ATTENTION en column en version mob */
+    flex-direction: row; /* en column en version mob */
     justify-content: space-between;
     align-items: center;
 }
@@ -439,7 +433,7 @@ main {
 
 .activities-cards img {
     width: 100%;
-    height: 380px; /* ATTENTION tab 200px et mob 141px */
+    height: 25vh;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -490,6 +484,17 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .filter-btn {
+        padding: 0 14px 0 14px;
+        font-size: 16px;
+    }
+    
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -500,7 +505,7 @@ footer {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
+        gap: 50px; /* Marie : retire margin-top: 50px; qui était en surplus avec le gap défini initialement en version ordi. Remplacé par le changement du gap pour tablettes */
     }
 
     .populaires-cards {
@@ -519,6 +524,10 @@ footer {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    .activities-cards img {
+        height: 200px;
     }
 }
 
@@ -609,9 +618,7 @@ footer {
 
     .filter-btn {
         justify-content: left;
-        font-size: 18px;
-        padding: 0 12px 0 12px;
-        min-width: 20%;
+        font-size: 16px;
     }
 
     .hebergements-and-populaires {
@@ -628,7 +635,6 @@ footer {
     }
 
     .populaires {
-        margin-top: 0;
         background-color: var(--main-bg-color)!important;
     }
 
@@ -647,17 +653,11 @@ footer {
 
     .hebergements-cards a {
         width: 100%;
-        min-height: 300px;
-        justify-content: stretch;
-
     }
 
     .hebergements-cards img {
-        min-height: 230px;
-        max-height: 230px; 
+        height: 38vh;
     }
-
-    /* M-queries OK mob pour navbar, bloc infos, populaires, hebergements, reste activités et footer à faire */
 
     .activities-cards {
         flex-direction: column;
@@ -669,10 +669,20 @@ footer {
     }
 
     .activities-cards img {
-        height: 141px;
+        height: 28vh;
     }
 
     footer {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 368px) {
+    .filter-btn {
+        font-size: 13.7px;
+        padding: 0 6px 0 6px;
+        word-break: break-all;
+        gap: 5px;
+        font-weight: 600;
     }
 }
