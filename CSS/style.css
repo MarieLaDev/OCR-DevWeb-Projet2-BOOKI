@@ -459,7 +459,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: left;
+    align-items: start;
     gap: 15px;
     width: 33%;
 }
