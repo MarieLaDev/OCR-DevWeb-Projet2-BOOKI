@@ -247,10 +247,6 @@ a {
     object-fit: cover;
 }
 
-.card-title {
-    font-size: 16px;
-}
-
 .euro {
     font-weight: 700;
 }
@@ -461,7 +457,7 @@ footer {
     justify-content: start;
     align-items: start;
     gap: 15px;
-    width: 33%;
+    flex-basis: 33%;
 }
 
 .footer-block h2 {
@@ -516,8 +512,8 @@ footer {
         width: 30%;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
+    .card-title, .footer-block h2, .footer-block ul {
+        font-size: 14px; /* Marie retire .populaires-cards pour que le paramètre s'applique à toutes les cards dès la version tablette même si les titres sont à 16px sur la maquette + ajout de .footer-block h2 et .footer-block ul pour une cohérence sur le footer - voir si on garde à 14px ou si on suit la maquette à 16px */
     }
 
     .populaires-cards .card-subtitle {
@@ -677,6 +673,10 @@ footer {
 
     footer {
         flex-direction: column;
+    }
+
+    .footer-block {
+        flex-basis: 100%;
     }
 }
 
