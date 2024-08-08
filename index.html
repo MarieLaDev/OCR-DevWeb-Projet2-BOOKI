@@ -39,14 +39,14 @@
                 <div class="cta div-column">
                     <div> <!-- Headline-->
                         <h1>Trouvez des hébergements pour des vacances de rêve </h1>
-                        <!-- ETUDIER CHEVAUCHEMENT du h1 sur p -->
                         <p class="cta-text">En plein centre ville ou en pleine nature</p>
                     </div>
                     <!-- search-bar -->
                     <form class="div-row search-bar">
+                    <!-- le form devrait contenir method="post" action="..." mais pas opérationnel -->
                         <div class="search-bar-loc"><i class="fa-solid fa-location-dot i-btn"></i>
                         </div>
-                        <input type="text" name="input-ville" id="input-ville" value="Marseille, France">
+                        <input type="text" name="input-ville" id="input-ville" input="required" value="" placeholder="Marseille, France">
                         <!-- Bouton ordi et tablette -->
                         <button type="submit" class="search-bar-btn">Rechercher</button>
                         <!-- Bouton mobile (par défaut hidden) -->
@@ -57,12 +57,12 @@
                         <div  class="filter-title">
                             Filtres
                         </div>
-                        <form class="filter-btn-zone">
+                        <div class="filter-btn-zone">
                             <button type="submit" class="filter-btn"><i class="fa-solid fa-money-bill i-btn"></i>Économique</button>
                             <button type="submit" class="filter-btn"><i class="fa-solid fa-person"></i>Familial</button>
                             <button type="submit" class="filter-btn"><i class="fa-solid fa-heart"></i>Romantique</button>
                             <button type="submit" class="filter-btn"><i class="fa-solid fa-fire"></i>Nos pépites</button>
-                        </form>
+                        </div>
                     </div>
                     <!-- info-bar -->
                     <div class="div-row">
@@ -80,7 +80,7 @@
                 <!-- Offers/Main-->
                 <section class="hebergements">
                     <div>
-                        <h2 class="section-title hebergement-title">Hébergements à Marseille</h2>
+                        <h2 class="section-title hebergements-title">Hébergements à Marseille</h2>
                     </div>
                     <div class="hebergements-cards">
                         <a href="#">
@@ -104,7 +104,7 @@
                         </a>
                         <a href="#">
                             <article class="card">
-                                <img src="images/hebergement/febrian-zakaria.jpg"  alt="Image d'une chambre de l'hôtel chez Amina montrant un lit">
+                                <img src="images/hebergement/febrian-zakaria.jpg" alt="Image d'une chambre de l'hôtel chez Amina montrant un lit">
                                 <div class="card-content">
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel Chez Amina</h3>
@@ -198,7 +198,7 @@
                             </article>
                         </a>
                     </div>
-                    <div class="plus-hebergements">
+                    <div class="more-hebergements">
                         <a href="#">Afficher plus</a>
                     </div>
                 </section>
@@ -298,7 +298,7 @@
                         </a>
                         <a href="#">
                             <section class="card">
-                                <img src="images/activites/florian-wehde.jpg" alt="Image de Notre dame de la Garde">
+                                <img class="img-notre-dame" src="images/activites/florian-wehde.jpg" alt="Image de Notre dame de la Garde">
                                 <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
                             </section>
                         </a>

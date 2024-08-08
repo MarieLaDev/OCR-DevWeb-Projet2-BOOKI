@@ -62,7 +62,6 @@ header {
 
 nav {
     align-self: flex-start;
-    margin-top: 2px;
 }
 
 nav ul {
@@ -77,15 +76,12 @@ nav li {
 }
 
 nav a {
-    flex: 1;
-    display: block; 
+    display: flex; 
     width: 100%;
     font-size: 16px;
     padding-top: 16px; 
     border-top: 2px solid transparent; /* sur mobile le padding et la bordure sont en bas */
 }
-
-
 
 nav a:hover, nav a:active {
     border-top: 2px solid var(--main-color);
@@ -290,66 +286,68 @@ main {
     width: 65%; /* 100% sur tab et mob */
 }
 
-.hebergement-title {
+.hebergements-title {
     margin-bottom: 30px;
 }
 
-.hebergements-cards, .hebergement-cards .card, .hebergements-cards .card-content {
+.hebergements-cards, .hebergements-cards .card, .hebergements-cards .card-content, .hebergements-cards a, .hebergements-cards .card-txt, .card-rating {
     display: flex;
 }
 
 .hebergements-cards {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
     gap: 25px;
 }
 
-.hebergements-cards .card, .hebergements-cards .card-content {
+.hebergements-cards a {
+    flex: 1 1 30%;
+}
+
+.hebergements-cards .card, .hebergements-cards .card-content, .hebergements-cards .card-txt {
     flex-direction: column;
 }
 
 .hebergements-cards .card {
-    justify-content: space-between;
-}
-
-.hebergements-cards a {
-    width: 30%; /* 100% version mob */
+    flex: 1 1 auto; /* equivaut à flew-grow: 1, flex-shrink:1 et flex-basis:auto  la card hebergement prendra tout l'espace possible de son parent (la balise a) */
 }
 
 .hebergements-cards img {
     width: 100%;
-    height: 136px;
+    height: 124px;
     object-position: center 90%; /* Photo centrée et la visualisation commence à 10% du bas de la photo */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-content {
-    justify-content: space-between;
     padding-left: 5px; 
     box-sizing: border-box;
     gap: 8px;
+    flex: 1 1 auto;
 }
 
-.hebergements-cards .card-txt .card-title {
+.card-txt {
+    flex: 1 1 auto;
+}
+
+.hebergements-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
-    /* ci-dessous, pour ne pas avoir de différence de hauteur dans les cards au passage à la ligne des titres les plus grands dois-je le laisser ? */
-    text-wrap: nowrap;
-    overflow: hidden;
 }
 
 .hebergements-cards .card-subtitle {
     margin: 0;
 }
 
-.hebergement-cards .card-rating {
+.hebergements-cards .card-rating {
     margin-bottom: 5px;
 }
 
-.plus-hebergements {
+.fa-xs {
+    line-height: 1;
+}
+
+.more-hebergements {
     font-size: 21px;
     font-weight: 700;
     margin-top: 30px;
@@ -361,7 +359,7 @@ main {
 }
 
 .populaires-title, .populaires-cards .card, 
-.populaires-cards .card-conten {
+.populaires-cards .card-content {
     display: flex;
 }
 
@@ -384,7 +382,6 @@ main {
 .populaires-cards .card-content {
     width: 67%;
     padding-left: 15px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
@@ -420,21 +417,24 @@ main {
     flex-direction: row; /* en column en version mob */
     justify-content: space-between;
     align-items: center;
+    gap: 30px; /* 15 en version mob */
 }
 
 .activities-cards a {
-    width: 24%;
+    display: flex;
+    flex:1 1 20%;
 }
 
 .activities-cards .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    flex: 1 1 auto;
 }
 
 .activities-cards img {
     width: 100%;
-    height: 25vh;
+    height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -649,8 +649,12 @@ footer {
         width: 100%;
     }
 
-    .hebergements-cards img {
-        height: 38vh;
+    .hebergements-cards .card-title, .activities .card-title {
+        font-size: 14px;
+    }
+
+    .hebergements-cards .card-subtitle {
+        font-size: 13px;
     }
 
     .activities-cards {
@@ -659,11 +663,16 @@ footer {
     }
 
     .activities-cards a {
+        flex: 1 1 100%;
         width: 100%;
     }
 
     .activities-cards img {
-        height: 28vh;
+        height: 124px;
+    }
+
+    .img-notre-dame {
+        object-position: center 17%; /* position photo à 17% du haut pour voir notre dame */
     }
 
     footer {
