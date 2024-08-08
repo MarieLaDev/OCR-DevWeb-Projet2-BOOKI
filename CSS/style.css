@@ -680,10 +680,10 @@ footer {
     }
 }
 
-@media (max-width: 368px) {
+@media (max-width: 360px) {
     .filter-btn {
-        font-size: 13.7px;
-        padding: 0 6px 0 6px;
+        font-size: 13px;
+        padding: 0 8px 0 8px;
         word-break: break-all;
         gap: 5px;
         font-weight: 600;
