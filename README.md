@@ -1,8 +1,8 @@
-Objectif du projet :
+# Objectif du projet :
 Développer le front-end du site Booki, sur la base d'une maquette figma 
 (https://www.figma.com/file/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?node-id=3%3A0&t=YL7QVHueotIL04nL-1)
 
-Doit être réalisé en HTML et CSS
+## Doit être réalisé en HTML et CSS uniquement
 Aucun framework CSS (type BootStrap ou Tailwind CSS) ou préprocesseur CSS (type Sass
 ou Less) ne doit être utilisé.
 Aucun autre langage ne doit être utilisé (comme JavaScript, par exemple).
