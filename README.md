@@ -1,3 +1,6 @@
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+
 # Objectif du projet :
 Développer le front-end du site Booki, sur la base d'une maquette figma 
 (https://www.figma.com/file/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki-(desktop%2C-mobile%2C-tablette)?node-id=3%3A0&t=YL7QVHueotIL04nL-1)
