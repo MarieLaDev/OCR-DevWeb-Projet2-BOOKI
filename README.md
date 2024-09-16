@@ -1,5 +1,6 @@
 [![forthebadge](https://img.shields.io/badge/HTML-5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://forthebadge.com)
 [![forthebadge](https://img.shields.io/badge/CSS-3-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://forthebadge.com)
+![Built with Love](https://img.shields.io/badge/built%20with-%E2%9D%A4-white?style=for-the-badge&color=violet)
 
 # Objectif du projet :
 Développer le front-end du site Booki, sur la base d'une maquette figma 
