@@ -1,5 +1,5 @@
-[![forthebadge](https://forthebadge.com/images/badges/uses-html5.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-css3.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-html5.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-css3.svg)](https://forthebadge.com)
 
 # Objectif du projet :
 Développer le front-end du site Booki, sur la base d'une maquette figma 
