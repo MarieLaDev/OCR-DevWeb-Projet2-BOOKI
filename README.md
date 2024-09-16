@@ -1,4 +1,4 @@
-[![forthebadge](https://forthebadge.com/images/badges/made-with-html5.svg)](https://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/HTML-5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-css3.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/featured/featured-built-with-love.svg)](https://forthebadge.com)
 
