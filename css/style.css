@@ -16,7 +16,8 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
-    --bg-cards-color:#D9D9D9; /* Ajout Marie */
+    --bg-cards-color: #D9D9D9;
+    /* Ajout Marie */
 }
 
 .fa-solid {
@@ -43,7 +44,10 @@ body {
 
 /********** logo et nav **********/
 /*********************************/
-header, .header, nav, ul {
+header,
+.header,
+nav,
+ul {
     display: flex;
 }
 
@@ -53,9 +57,9 @@ header {
 }
 
 .header {
-    /* par défaut flex-direction en row mais doit être en column sur mob */ 
+    /* par défaut flex-direction en row mais doit être en column sur mob */
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     margin-bottom: 30px;
 }
 
@@ -81,14 +85,16 @@ nav li {
 }
 
 nav a {
-    display: flex; 
+    display: flex;
     width: 100%;
     font-size: 16px;
-    padding-top: 16px; 
-    border-top: 2px solid transparent; /* sur mobile le padding et la bordure sont en bas */
+    padding-top: 16px;
+    border-top: 2px solid transparent;
+    /* sur mobile le padding et la bordure sont en bas */
 }
 
-nav a:hover, nav a:active {
+nav a:hover,
+nav a:active {
     border-top: 2px solid var(--main-color);
     color: var(--main-color);
 }
@@ -96,7 +102,13 @@ nav a:hover, nav a:active {
 
 /************ zone CTA - Formulaire de recherche *************/
 /*************************************************************/
-.cta, .search-bar-loc, .search-bar-btn, .filter-bar, .filter-btn-zone, .filter-btn, .icon-info  {
+.cta,
+.search-bar-loc,
+.search-bar-btn,
+.filter-bar,
+.filter-btn-zone,
+.filter-btn,
+.icon-info {
     display: flex;
 }
 
@@ -116,12 +128,13 @@ h1 {
 }
 
 /****** Barre de recherche ******/
-.search-bar-loc, .search-bar-btn {
+.search-bar-loc,
+.search-bar-btn {
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
-.search-bar-loc {  
+.search-bar-loc {
     width: 50px;
     height: 49px;
     border: 1px solid var(--bg-cards-color);
@@ -145,7 +158,7 @@ h1 {
 }
 
 .search-bar-btn {
-    height: 51px; 
+    height: 51px;
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
     border-radius: 0 15px 15px 0;
@@ -161,19 +174,22 @@ h1 {
 }
 
 .search-bar-btn:hover {
-    background-color: rgba(0, 101, 252, 0.9); /* Ajout d'un survol bouton recherche, le laisse t'on ? */
+    background-color: rgba(0, 101, 252, 0.9);
+    /* Ajout d'un survol bouton recherche, le laisse t'on ? */
 }
 
 
 /****** Zone de filtres ******/
 .filter-bar {
-    flex-direction: row; /* passe en column en tab et mob */
+    flex-direction: row;
+    /* passe en column en tab et mob */
     align-items: center;
-    gap: 15px; /* 20px pour tab et mob */
+    gap: 15px;
+    /* 20px pour tab et mob */
 }
 
 .filter-title {
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -189,13 +205,14 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0 19px 0 19px;
-    height: 50px; 
+    height: 50px;
     border: 2px solid var(--bg-cards-color);
     background-color: white;
     border-radius: 25px;
     font-weight: 700;
     gap: 15px;
-    font-size: 20px; /* 16px sur mobile */
+    font-size: 20px;
+    /* 16px sur mobile */
 }
 
 /* Survol des boutons filtres */
@@ -210,23 +227,25 @@ h1 {
 
 .icon-info {
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     height: 24px;
     width: 24px;
     border: 1px solid var(--bg-cards-color);
     border-radius: 12px;
     margin: 0 10px 10px 0;
 }
+
 /* Fin header */
 
 
 /******* Classes communes utilsées à plusieurs endroits du site *******/
-.div-row, .div-column { 
+.div-row,
+.div-column {
     display: flex;
 }
 
 /* div flex row align center */
-.div-row { 
+.div-row {
     flex-direction: row;
     align-items: center;
 }
@@ -246,7 +265,7 @@ a {
     font-size: 22px;
 }
 
-.card { 
+.card {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
@@ -264,6 +283,7 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
 /****** Fin des communs *******/
 
 main {
@@ -281,12 +301,14 @@ main {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    gap: 40px; /* gap 50px sur tab et 15px sur mob */
+    gap: 40px;
+    /* gap 50px sur tab et 15px sur mob */
     margin-top: 30px;
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color); /* pas de fond pour la version mob */
+    background-color: var(--main-bg-color);
+    /* pas de fond pour la version mob */
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -294,14 +316,20 @@ main {
 
 /****** Zone hébergements ******/
 .hebergements {
-    width: 65%; /* 100% sur tab et mob */
+    width: 65%;
+    /* 100% sur tab et mob */
 }
 
 .hebergements-title {
     margin-bottom: 30px;
 }
 
-.hebergements-cards, .hebergements-cards .card, .hebergements-cards .card-content, .hebergements-cards a, .hebergements-cards .card-txt, .card-rating {
+.hebergements-cards,
+.hebergements-cards .card,
+.hebergements-cards .card-content,
+.hebergements-cards a,
+.hebergements-cards .card-txt,
+.card-rating {
     display: flex;
 }
 
@@ -314,24 +342,28 @@ main {
     flex: 1 1 30%;
 }
 
-.hebergements-cards .card, .hebergements-cards .card-content, .hebergements-cards .card-txt {
+.hebergements-cards .card,
+.hebergements-cards .card-content,
+.hebergements-cards .card-txt {
     flex-direction: column;
 }
 
 .hebergements-cards .card {
-    flex: 1 1 auto; /* equivaut à flew-grow: 1, flex-shrink:1 et flex-basis:auto  la card hebergement prendra tout l'espace possible de son parent (la balise a) */
+    flex: 1 1 auto;
+    /* equivaut à flew-grow: 1, flex-shrink:1 et flex-basis:auto  la card hebergement prendra tout l'espace possible de son parent (la balise a) */
 }
 
 .hebergements-cards img {
     width: 100%;
     height: 124px;
-    object-position: center 90%; /* Photo centrée et la visualisation commence à 10% du bas de la photo */
+    object-position: center 90%;
+    /* Photo centrée et la visualisation commence à 10% du bas de la photo */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-content {
-    padding-left: 5px; 
+    padding-left: 5px;
     box-sizing: border-box;
     gap: 8px;
     flex: 1 1 auto;
@@ -369,7 +401,8 @@ main {
     width: 32%;
 }
 
-.populaires-title, .populaires-cards .card, 
+.populaires-title,
+.populaires-cards .card,
 .populaires-cards .card-content {
     display: flex;
 }
@@ -425,15 +458,17 @@ main {
 
 .activities-cards {
     display: flex;
-    flex-direction: row; /* en column en version mob */
+    flex-direction: row;
+    /* en column en version mob */
     justify-content: space-between;
     align-items: center;
-    gap: 30px; /* 15 en version mob */
+    gap: 30px;
+    /* 15 en version mob */
 }
 
 .activities-cards a {
     display: flex;
-    flex:1 1 20%;
+    flex: 1 1 20%;
 }
 
 .activities-cards .card {
@@ -461,7 +496,8 @@ main {
 /****************** FOOTER *****************/
 /*******************************************/
 footer {
-    display: flex;/* row par défaut mais doit passer en column pour mobile */
+    display: flex;
+    /* row par défaut mais doit passer en column pour mobile */
     justify-content: space-between;
     padding: 20px;
     gap: 50px;
@@ -497,6 +533,7 @@ footer {
 /**************************************************/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
     /***** CTA - Zone de filtre *****/
     .filter-bar {
         flex-direction: column;
@@ -508,7 +545,7 @@ footer {
         padding: 0 14px 0 14px;
         font-size: 16px;
     }
-    
+
     /* Zone hebergement et populaires */
     .hebergements-and-populaires {
         flex-direction: column;
@@ -520,7 +557,8 @@ footer {
 
     .populaires {
         width: 100%;
-        gap: 50px; /* Marie : retire margin-top: 50px; qui était en surplus avec le gap défini initialement en version ordi. Remplacé par le changement du gap pour tablettes */
+        gap: 50px;
+        /* Marie : retire margin-top: 50px; qui était en surplus avec le gap défini initialement en version ordi. Remplacé par le changement du gap pour tablettes */
     }
 
     .populaires-cards {
@@ -533,8 +571,11 @@ footer {
         width: 30%;
     }
 
-    .card-title, .footer-block h2, .footer-block ul {
-        font-size: 14px; /* Marie retire .populaires-cards pour que le paramètre s'applique à toutes les cards dès la version tablette même si les titres sont à 16px sur la maquette + ajout de .footer-block h2 et .footer-block ul pour une cohérence sur le footer - voir si on garde à 14px ou si on suit la maquette à 16px */
+    .card-title,
+    .footer-block h2,
+    .footer-block ul {
+        font-size: 14px;
+        /* Marie retire .populaires-cards pour que le paramètre s'applique à toutes les cards dès la version tablette même si les titres sont à 16px sur la maquette + ajout de .footer-block h2 et .footer-block ul pour une cohérence sur le footer - voir si on garde à 14px ou si on suit la maquette à 16px */
     }
 
     .populaires-cards .card-subtitle {
@@ -551,7 +592,7 @@ footer {
     .main-container {
         padding: 0;
     }
-    
+
     /*************************************/
     /************** HEADER ***************/
     /*************************************/
@@ -571,7 +612,7 @@ footer {
     nav ul {
         gap: 0;
     }
-    
+
     nav a {
         width: 100%;
         padding: 0 0 16px 0;
@@ -579,7 +620,8 @@ footer {
         border-bottom: 2px solid var(--main-bg-color);
     }
 
-    nav a:hover, nav a:active {
+    nav a:hover,
+    nav a:active {
         border-top: 2px solid transparent;
         border-bottom: 2px solid var(--main-color);
         color: var(--main-color);
@@ -651,7 +693,7 @@ footer {
     .hebergements-and-populaires {
         gap: 10px;
     }
-    
+
     .hebergements-and-populaires section {
         border-radius: 0;
         background-color: white;
@@ -659,10 +701,10 @@ footer {
 
     /****** zone hébergements ******/
     .hebergements {
-        order:2;
+        order: 2;
     }
 
-     .hebergements-cards {
+    .hebergements-cards {
         flex-direction: column;
         gap: 15px;
     }
@@ -671,7 +713,8 @@ footer {
         width: 100%;
     }
 
-    .hebergements-cards .card-title, .activities .card-title {
+    .hebergements-cards .card-title,
+    .activities .card-title {
         font-size: 14px;
     }
 
@@ -681,7 +724,7 @@ footer {
 
     /****** Zone populaires ******/
     .populaires {
-        background-color: var(--main-bg-color)!important;
+        background-color: var(--main-bg-color) !important;
     }
 
     .populaires-cards {
@@ -692,7 +735,7 @@ footer {
         width: 100%;
     }
 
-   
+
     /*************** Zone activités **************/
     /*********************************************/
     .activities-cards {
@@ -710,7 +753,8 @@ footer {
     }
 
     .img-notre-dame {
-        object-position: center 17%; /* position photo à 17% du haut pour voir notre dame */
+        object-position: center 17%;
+        /* position photo à 17% du haut pour voir notre dame */
     }
 
     /*****************************************/
@@ -727,6 +771,7 @@ footer {
 
 /* média queries ajouté par rapport à la maquette, le laisse t'on ? */
 @media (max-width: 360px) {
+
     /****** MAIN - Zone CTA - Filtre ******/
     .filter-btn {
         font-size: 13px;
